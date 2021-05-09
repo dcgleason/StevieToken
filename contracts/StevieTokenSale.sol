@@ -1,5 +1,4 @@
-pragma solidity ^0.5.17;
-pragma experimental SMTChecker;
+pragma solidity ^0.8.4;
 
 
 import "./StevieToken.sol";
@@ -12,7 +11,7 @@ contract StevieTokenSale {
 
     event Sell(address _buyer, uint256 _amount);
 
-    function SteveTokenSale(StevieToken _tokenContract, uint256 _tokenPrice) public {
+    constructor(StevieToken _tokenContract, uint256 _tokenPrice) {
         admin = msg.sender;
         tokenContract = _tokenContract;
         tokenPrice = _tokenPrice;

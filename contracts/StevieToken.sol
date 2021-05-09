@@ -1,5 +1,5 @@
-pragma solidity ^0.5.17;
-pragma experimental SMTChecker;
+pragma solidity ^0.8.4;
+
 
 
 contract StevieToken {
@@ -23,7 +23,7 @@ contract StevieToken {
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
 
-    function SteveToken (uint256 _initialSupply) public {
+    constructor (uint256 _initialSupply) {
         balanceOf[msg.sender] = _initialSupply;
         totalSupply = _initialSupply;
     }
